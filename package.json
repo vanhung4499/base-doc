@@ -2,17 +2,26 @@
   "name": "theme-vdoing-doc",
   "version": "1.0.0",
   "scripts": {
+    "clean": "rimraf docs/.temp",
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "deploy": "bash deploy.sh",
     "updateTheme": "yarn remove vuepress-theme-vdoing && rm -rf node_modules && yarn && yarn add vuepress-theme-vdoing -D",
-    "editFm": "node utils/editFrontmatter.js"
+    "editFm": "node utils/editFrontmatter.js",
+    "lint": "markdownlint -r markdownlint-rule-emphasis-style -c docs/.markdownlint.json **/*.md -i node_modules",
+    "lint:fix": "markdownlint -f -r markdownlint-rule-emphasis-style -c docs/.markdownlint.json **/*.md -i node_modules",
+    "show-help": "vuepress --help",
+    "view-info": "vuepress view-info ./ --temp docs/.temp"
   },
   "license": "MIT",
   "devDependencies": {
     "dayjs": "^1.9.7",
     "inquirer": "^7.1.0",
     "json2yaml": "^1.1.0",
+    "rimraf": "^3.0.1",
+    "markdownlint-cli": "^0.25.0",
+    "markdownlint-rule-emphasis-style": "^1.0.1",
+    "vue-toasted": "^1.1.25",
     "vuepress": "1.9.2",
     "vuepress-plugin-baidu-tongji": "^1.0.1",
     "vuepress-plugin-demo-block": "^0.7.2",
@@ -22,6 +31,5 @@
     "vuepress-plugin-zooming": "^1.1.7",
     "vuepress-theme-vdoing": "^1.12.3",
     "yamljs": "^0.3.0"
-  },
-  "dependencies": {}
+  }
 }
