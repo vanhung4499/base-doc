@@ -18,7 +18,7 @@ set -e
 npm run build
 
 # go to build dir
-cd ${ROOT_DIR}/docs/.temp
+cd ${ROOT_DIR}/docs/.vuepress/dist
 
 # add cname if needed
 # echo 'www.example.com' > CNAME
@@ -41,4 +41,4 @@ git push -f "${GITHUB_URL}" master:gh-pages
 
 # Clean
 cd -
-rm -rf ${ROOT_DIR}/docs/.temp
+rm -rf ${ROOT_DIR}/docs/.vuepress/dist

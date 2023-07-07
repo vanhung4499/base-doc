@@ -2,7 +2,7 @@
   "name": "theme-vdoing-doc",
   "version": "1.0.0",
   "scripts": {
-    "clean": "rimraf docs/.temp",
+    "clean": "rimraf docs/.vuepress/dist",
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "deploy": "bash scripts/deploy.sh",
