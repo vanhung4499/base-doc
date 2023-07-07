@@ -5,7 +5,7 @@
     "clean": "rimraf docs/.temp",
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "deploy": "bash deploy.sh",
+    "deploy": "bash scripts/deploy.sh",
     "updateTheme": "yarn remove vuepress-theme-vdoing && rm -rf node_modules && yarn && yarn add vuepress-theme-vdoing -D",
     "editFm": "node utils/editFrontmatter.js",
     "lint": "markdownlint -r markdownlint-rule-emphasis-style -c docs/.markdownlint.json **/*.md -i node_modules",
